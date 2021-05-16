@@ -1,5 +1,15 @@
 a {
   font-size: 20px;
-  color: chocolate;
+  color: cornflowerblue;
   text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: red;
+}
+ul {
+  list-style: none;
+}
+li:not(last-child) {
+  margin-bottom: 20px;
 }

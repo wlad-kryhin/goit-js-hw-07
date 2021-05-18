@@ -10,14 +10,10 @@ function getCat(argument){
 // console.log(auf);
 // console.log(test3.textContent);
 getCat(lengthCategory)
-const test = [...allCaterogies]
-const newTest = test.forEach(obj => console.log(`Категория : ${obj.firstElementChild.textContent}`))
-const newBaby = test.forEach(obj => console.log(`Кол-во элементов : ${obj.childNodes.length}`))
+const newMycategory = document.querySelectorAll('#categories .item h2')
+const newTest = [...newMycategory].forEach(obj => console.log(`Категория : ${obj.textContent}`))
 
-
-//     function allItems(title, item) {
-//         console.log(`Категория ${title}`)
-//         console.log(`Кол-во элементов ${item}`)
-        
-// }
-     
+const allItems = document.querySelectorAll('#categories .item ul li');
+console.log(document.querySelectorAll('#categories .item ul li'));
+const newCateg = console.log(`Кол-во элементов : ${allItems}`);
+console.log(allItems.children);

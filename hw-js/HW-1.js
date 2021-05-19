@@ -10,10 +10,5 @@ function getCat(argument){
 // console.log(auf);
 // console.log(test3.textContent);
 getCat(lengthCategory)
-const newMycategory = document.querySelectorAll('#categories .item h2')
-const newTest = [...newMycategory].forEach(obj => console.log(`Категория : ${obj.textContent}`))
-
-const allItems = document.querySelectorAll('#categories .item ul li');
-console.log(document.querySelectorAll('#categories .item ul li'));
-const newCateg = console.log(`Кол-во элементов : ${allItems}`);
-console.log(allItems.children);
+const newMycategory = document.querySelectorAll('#categories .item')
+const newTest = [...newMycategory].forEach(element => console.log(`Категория : ${element.firstElementChild.textContent} , кол-во элементов : ${element.childNodes.length}`));

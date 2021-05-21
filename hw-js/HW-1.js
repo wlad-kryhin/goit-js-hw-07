@@ -1,15 +1,9 @@
 const category = document.querySelector('#categories')
-const allCaterogies = category.children
-const lengthCategory = allCaterogies.length
-function getCat(argument){
+const allCaterogies = category.children.length
+function getCat(argument) {
     console.log(`В списке ${argument} категории.`)
 }
-// const test2 = category.firstElementChild
-// const test3 = test2.firstElementChild
-// const auf = category.firstElementChild.length
-// console.log(auf);
-// console.log(test3.textContent);
-getCat(lengthCategory)
+getCat(allCaterogies)
 const newMyCategory = document.querySelectorAll('.item')
-console.log(newMyCategory.childElements);
-const newTest = [...newMyCategory].forEach(element => console.log(`Категория : ${element.firstElementChild.textContent} , кол-во элементов : ${element.childNodes.length}`));
+
+const newTest = [...newMyCategory].forEach(element => console.log(`Категория : ${element.querySelector('h2').textContent} , кол-во элементов : ${element.querySelectorAll('li').length}`));

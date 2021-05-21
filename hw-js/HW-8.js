@@ -6,20 +6,18 @@ renderBtn.addEventListener('click', getAmount);
 destroyBtn.addEventListener('click', destroyBoxes);
 
 function getAmount() {
-  var amount = +document.querySelector("#controls input").value;
+  let amount = +document.querySelector('#controls input').value;
   createBoxes(amount);
 }
 
 function createBoxes(amount) {
-  var basicSize = 30;
-  var fragment = document.createDocumentFragment();
-  for (var i = 0; i < amount; i++) {
-    var size = basicSize + i * 10;
-    var div = document.createElement("div");
+  const basicSize = 30;
+  for (let i = 0; i < amount; i += 1) {
+    let size = basicSize + i * 10;
+    let div = document.createElement('div');
     div.style.cssText = `width: ${size}px; height: ${size}px; background-color: rgba( ${random()} , ${random()} , ${random()} )`;
-    fragment.appendChild(div);
+    boxes.appendChild(div);
   }
-  boxes.appendChild(fragment);
 }
 
 function destroyBoxes() {
@@ -27,5 +25,5 @@ function destroyBoxes() {
 }
 
 function random() {
-  return Math.floor(Math.random() * 256);
+  return Math.floor(Math.random() * 126);
 }
